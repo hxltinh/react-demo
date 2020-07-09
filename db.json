@@ -1,0 +1,179 @@
+{
+    "weather": [
+        {
+            "city": "London",
+            "weather_by_day": [
+                {
+                    "date": "mon",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "tues",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "wen",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "thus",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "fri",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                }
+            ]
+        },
+        {
+            "city": "Ho Chi Minh",
+            "weather_by_day": [
+                {
+                    "date": "mon",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "tues",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "wen",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "thus",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "fri",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                }
+            ]
+        },
+        {
+            "city": "New York",
+            "weather_by_day": [
+                {
+                    "date": "mon",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "tues",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "wen",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "thus",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "fri",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                }
+            ]
+        },
+        {
+            "city": "Tokyo",
+            "weather_by_day": [
+                {
+                    "date": "mon",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "tues",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "wen",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "thus",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "fri",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                }
+            ]
+        },
+        {
+            "city": "Seul",
+            "weather_by_day": [
+                {
+                    "date": "mon",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "tues",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "wen",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "thus",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                },
+                {
+                    "date": "fri",
+                    "wind_speed": 30,
+                    "air_quality": "poor",
+                    "humidity": 66
+                }
+            ]
+        }
+    ]
+}
