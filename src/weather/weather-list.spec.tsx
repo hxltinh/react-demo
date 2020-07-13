@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { LinearProgress } from '@material-ui/core';
 import { WeatherItem } from './weather-item';
+import { WeatherByDay } from './interface';
 
 describe(WeatherList.name, () => {
     describe('when loading', () => {
@@ -15,26 +16,23 @@ describe(WeatherList.name, () => {
         });
     });
 
-    describe('when loading is done with 3 items', () => {
+    describe('when loading is done with items', () => {
         it('it should show all items', () => {
-            const items = [
+            const items: WeatherByDay[] = [
                 {
-                    date: 'mon',
-                    wind_speed: 30,
-                    air_quality: 'poor',
-                    humidity: 66,
+                    applicable_date: 'mon',
+                    max_temp: 30,
+                    min_temp: 22,
                 },
                 {
-                    date: 'tues',
-                    wind_speed: 30,
-                    air_quality: 'poor',
-                    humidity: 66,
+                    applicable_date: 'tues',
+                    max_temp: 30,
+                    min_temp: 22,
                 },
                 {
-                    date: 'wen',
-                    wind_speed: 30,
-                    air_quality: 'poor',
-                    humidity: 66,
+                    applicable_date: 'wen',
+                    max_temp: 30,
+                    min_temp: 22,
                 },
             ];
             const wrapper = shallow(

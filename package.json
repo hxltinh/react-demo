@@ -6,7 +6,7 @@
         "postbuild": "node scripts/generate-index",
         "start": "concurrently 'yarn parcel' 'yarn server'",
         "parcel": "parcel src/index.html",
-        "server": "json-server --watch db.json",
+        "server": "node proxy/server.js",
         "test": "jest --config jest.config.js --watchAll"
     },
     "jest": {
@@ -37,7 +37,6 @@
         "eslint": "^6.8.0",
         "jest": "^26.1.0",
         "jest-fetch-mock": "^3.0.3",
-        "json-server": "^0.16.1",
         "parcel-bundler": "^1.12.4",
         "ts-jest": "^26.1.1",
         "typescript": "^3.9.5"
@@ -45,6 +44,9 @@
     "dependencies": {
         "@material-ui/core": "^4.10.2",
         "axios": "^0.19.2",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "path": "^0.12.7",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0"

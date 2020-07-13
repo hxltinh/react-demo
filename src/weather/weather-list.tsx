@@ -26,13 +26,12 @@ export const WeatherList = (props: WeatherState) => {
         <section className='weather-list'>
             <div className='city-name'>{cityName}</div>
             <Grid container spacing={3}>
-                {items.map(({ date, wind_speed, air_quality, humidity }) => (
+                {items.map(({ applicable_date, max_temp, min_temp }) => (
                     <WeatherItem
-                        key={date}
-                        date={date}
-                        windSpeed={wind_speed}
-                        airQuality={air_quality}
-                        humidity={humidity}
+                        key={applicable_date}
+                        date={applicable_date}
+                        minTemp={min_temp}
+                        maxTemp={max_temp}
                     ></WeatherItem>
                 ))}
             </Grid>

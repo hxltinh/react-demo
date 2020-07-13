@@ -1,6 +1,5 @@
 export interface WeatherByDay {
-    date: string;
-    wind_speed: number;
-    air_quality: string;
-    humidity: number;
+    applicable_date: string;
+    max_temp: number;
+    min_temp: number;
 }

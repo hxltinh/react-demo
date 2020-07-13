@@ -4412,12 +4412,12 @@ function createReactContext(defaultValue, calculateChangedBits) {
 var index = _react.default.createContext || createReactContext;
 var _default = index;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js"}],"../node_modules/path-to-regexp/node_modules/isarray/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js"}],"../node_modules/react-router/node_modules/isarray/index.js":[function(require,module,exports) {
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],"../node_modules/path-to-regexp/index.js":[function(require,module,exports) {
+},{}],"../node_modules/react-router/node_modules/path-to-regexp/index.js":[function(require,module,exports) {
 var isarray = require('isarray')
 
 /**
@@ -4845,7 +4845,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
 
-},{"isarray":"../node_modules/path-to-regexp/node_modules/isarray/index.js"}],"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
+},{"isarray":"../node_modules/react-router/node_modules/isarray/index.js"}],"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5767,7 +5767,7 @@ if ("development" !== "production") {
     global[key] = "esm";
   }
 }
-},{"@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","history":"../node_modules/history/esm/history.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"../node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"../node_modules/path-to-regexp/index.js","react-is":"../node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"../node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","history":"../node_modules/history/esm/history.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"../node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"../node_modules/react-router/node_modules/path-to-regexp/index.js","react-is":"../node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"../node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6207,157 +6207,7 @@ exports.Header = function () {
     href: '/'
   }, react_1.default.createElement("span", null, "Tinh Ha ReactJs Demonstration")))));
 };
-},{"react":"../node_modules/react/index.js"}],"weather/weather-state.ts":[function(require,module,exports) {
-"use strict";
-
-var __assign = this && this.__assign || function () {
-  __assign = Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-    }
-
-    return t;
-  };
-
-  return __assign.apply(this, arguments);
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.weatherReducer = exports.initialValue = void 0;
-exports.initialValue = {
-  loading: false,
-  items: []
-};
-
-exports.weatherReducer = function (state, _a) {
-  if (state === void 0) {
-    state = exports.initialValue;
-  }
-
-  var type = _a.type,
-      payload = _a.payload;
-
-  switch (type) {
-    case 'SEARCHING':
-      {
-        return __assign(__assign({}, state), {
-          loading: true
-        });
-      }
-
-    case 'SEARCH_DONE':
-      {
-        return __assign(__assign({}, state), {
-          cityName: payload === null || payload === void 0 ? void 0 : payload.cityName,
-          items: payload ? payload.items : [],
-          loading: false
-        });
-      }
-
-    default:
-      {
-        return state;
-      }
-  }
-};
-},{}],"weather/weather-context.tsx":[function(require,module,exports) {
-"use strict";
-
-var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  Object.defineProperty(o, k2, {
-    enumerable: true,
-    get: function get() {
-      return m[k];
-    }
-  });
-} : function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  o[k2] = m[k];
-});
-
-var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
-  Object.defineProperty(o, "default", {
-    enumerable: true,
-    value: v
-  });
-} : function (o, v) {
-  o["default"] = v;
-});
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-  }
-
-  __setModuleDefault(result, mod);
-
-  return result;
-};
-
-var __read = this && this.__read || function (o, n) {
-  var m = typeof Symbol === "function" && o[Symbol.iterator];
-  if (!m) return o;
-  var i = m.call(o),
-      r,
-      ar = [],
-      e;
-
-  try {
-    while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
-      ar.push(r.value);
-    }
-  } catch (error) {
-    e = {
-      error: error
-    };
-  } finally {
-    try {
-      if (r && !r.done && (m = i["return"])) m.call(i);
-    } finally {
-      if (e) throw e.error;
-    }
-  }
-
-  return ar;
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.useWeatherContext = exports.WeatherProvider = void 0;
-
-var react_1 = __importStar(require("react"));
-
-var weather_state_1 = require("./weather-state");
-
-var WeatherContext = react_1.createContext(undefined);
-
-exports.WeatherProvider = function (_a) {
-  var children = _a.children;
-
-  var _b = __read(react_1.useReducer(weather_state_1.weatherReducer, weather_state_1.initialValue), 2),
-      state = _b[0],
-      dispatch = _b[1];
-
-  var contextValue = [state, dispatch];
-  return react_1.default.createElement(WeatherContext.Provider, {
-    value: contextValue
-  }, children);
-};
-
-exports.useWeatherContext = function () {
-  return react_1.useContext(WeatherContext);
-};
-},{"react":"../node_modules/react/index.js","./weather-state":"weather/weather-state.ts"}],"../node_modules/@material-ui/utils/esm/chainPropTypes.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"../node_modules/@material-ui/utils/esm/chainPropTypes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15835,7 +15685,157 @@ var _withTheme = _interopRequireDefault(require("./withTheme"));
 var _styles = require("@material-ui/styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./colorManipulator":"../node_modules/@material-ui/core/esm/styles/colorManipulator.js","./createMuiTheme":"../node_modules/@material-ui/core/esm/styles/createMuiTheme.js","./createMuiStrictModeTheme":"../node_modules/@material-ui/core/esm/styles/createMuiStrictModeTheme.js","./createStyles":"../node_modules/@material-ui/core/esm/styles/createStyles.js","./makeStyles":"../node_modules/@material-ui/core/esm/styles/makeStyles.js","./responsiveFontSizes":"../node_modules/@material-ui/core/esm/styles/responsiveFontSizes.js","./styled":"../node_modules/@material-ui/core/esm/styles/styled.js","./transitions":"../node_modules/@material-ui/core/esm/styles/transitions.js","./useTheme":"../node_modules/@material-ui/core/esm/styles/useTheme.js","./withStyles":"../node_modules/@material-ui/core/esm/styles/withStyles.js","./withTheme":"../node_modules/@material-ui/core/esm/styles/withTheme.js","@material-ui/styles":"../node_modules/@material-ui/styles/esm/index.js"}],"../node_modules/@material-ui/core/esm/colors/purple.js":[function(require,module,exports) {
+},{"./colorManipulator":"../node_modules/@material-ui/core/esm/styles/colorManipulator.js","./createMuiTheme":"../node_modules/@material-ui/core/esm/styles/createMuiTheme.js","./createMuiStrictModeTheme":"../node_modules/@material-ui/core/esm/styles/createMuiStrictModeTheme.js","./createStyles":"../node_modules/@material-ui/core/esm/styles/createStyles.js","./makeStyles":"../node_modules/@material-ui/core/esm/styles/makeStyles.js","./responsiveFontSizes":"../node_modules/@material-ui/core/esm/styles/responsiveFontSizes.js","./styled":"../node_modules/@material-ui/core/esm/styles/styled.js","./transitions":"../node_modules/@material-ui/core/esm/styles/transitions.js","./useTheme":"../node_modules/@material-ui/core/esm/styles/useTheme.js","./withStyles":"../node_modules/@material-ui/core/esm/styles/withStyles.js","./withTheme":"../node_modules/@material-ui/core/esm/styles/withTheme.js","@material-ui/styles":"../node_modules/@material-ui/styles/esm/index.js"}],"weather/weather-state.ts":[function(require,module,exports) {
+"use strict";
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.weatherReducer = exports.initialValue = void 0;
+exports.initialValue = {
+  loading: false,
+  items: []
+};
+
+exports.weatherReducer = function (state, _a) {
+  if (state === void 0) {
+    state = exports.initialValue;
+  }
+
+  var type = _a.type,
+      payload = _a.payload;
+
+  switch (type) {
+    case 'SEARCHING':
+      {
+        return __assign(__assign({}, state), {
+          loading: true
+        });
+      }
+
+    case 'SEARCH_DONE':
+      {
+        return __assign(__assign({}, state), {
+          cityName: payload === null || payload === void 0 ? void 0 : payload.cityName,
+          items: payload ? payload.items : [],
+          loading: false
+        });
+      }
+
+    default:
+      {
+        return state;
+      }
+  }
+};
+},{}],"weather/weather-context.tsx":[function(require,module,exports) {
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __read = this && this.__read || function (o, n) {
+  var m = typeof Symbol === "function" && o[Symbol.iterator];
+  if (!m) return o;
+  var i = m.call(o),
+      r,
+      ar = [],
+      e;
+
+  try {
+    while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
+      ar.push(r.value);
+    }
+  } catch (error) {
+    e = {
+      error: error
+    };
+  } finally {
+    try {
+      if (r && !r.done && (m = i["return"])) m.call(i);
+    } finally {
+      if (e) throw e.error;
+    }
+  }
+
+  return ar;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useWeatherContext = exports.WeatherProvider = void 0;
+
+var react_1 = __importStar(require("react"));
+
+var weather_state_1 = require("./weather-state");
+
+var WeatherContext = react_1.createContext(undefined);
+
+exports.WeatherProvider = function (_a) {
+  var children = _a.children;
+
+  var _b = __read(react_1.useReducer(weather_state_1.weatherReducer, weather_state_1.initialValue), 2),
+      state = _b[0],
+      dispatch = _b[1];
+
+  var contextValue = [state, dispatch];
+  return react_1.default.createElement(WeatherContext.Provider, {
+    value: contextValue
+  }, children);
+};
+
+exports.useWeatherContext = function () {
+  return react_1.useContext(WeatherContext);
+};
+},{"react":"../node_modules/react/index.js","./weather-state":"weather/weather-state.ts"}],"../node_modules/@material-ui/core/esm/colors/purple.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -82945,16 +82945,15 @@ var core_1 = require("@material-ui/core");
 
 exports.WeatherItem = function (props) {
   var date = props.date,
-      windSpeed = props.windSpeed,
-      airQuality = props.airQuality,
-      humidity = props.humidity;
+      maxTemp = props.maxTemp,
+      minTemp = props.minTemp;
   var classes = useStyles();
   return react_1.default.createElement(core_1.Grid, {
     item: true,
     xs: 3
   }, react_1.default.createElement(core_1.Paper, {
     className: classes.paper
-  }, react_1.default.createElement("div", null, "Date: ", date), react_1.default.createElement("div", null, "Wind speed: ", windSpeed), react_1.default.createElement("div", null, "Air quality: ", airQuality), react_1.default.createElement("div", null, "Humidity: ", humidity)));
+  }, react_1.default.createElement("div", null, "Date: ", date), react_1.default.createElement("div", null, "Max temparature: ", maxTemp), react_1.default.createElement("div", null, "Min temparature: ", minTemp)));
 };
 
 var useStyles = core_1.makeStyles(function (theme) {
@@ -83010,16 +83009,14 @@ exports.WeatherList = function (props) {
     container: true,
     spacing: 3
   }, items.map(function (_a) {
-    var date = _a.date,
-        wind_speed = _a.wind_speed,
-        air_quality = _a.air_quality,
-        humidity = _a.humidity;
+    var applicable_date = _a.applicable_date,
+        max_temp = _a.max_temp,
+        min_temp = _a.min_temp;
     return react_1.default.createElement(weather_item_1.WeatherItem, {
-      key: date,
-      date: date,
-      windSpeed: wind_speed,
-      airQuality: air_quality,
-      humidity: humidity
+      key: applicable_date,
+      date: applicable_date,
+      minTemp: min_temp,
+      maxTemp: max_temp
     });
   })));
 };
@@ -83194,11 +83191,66 @@ exports.searchWeather = function (cityName) {
 
 var searchByQuery = function searchByQuery(cityName) {
   return __awaiter(void 0, void 0, Promise, function () {
+    var result, woeid;
+    return __generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          return [4
+          /*yield*/
+          , findWoeidByLocationName(cityName)];
+
+        case 1:
+          result = _a.sent();
+
+          if (result.length === 0) {
+            return [2
+            /*return*/
+            , null];
+          }
+
+          woeid = result[0].woeid;
+          return [2
+          /*return*/
+          , findWeatherInfoByWoeid(woeid)];
+      }
+    });
+  });
+};
+
+var findWoeidByLocationName = function findWoeidByLocationName(cityName) {
+  return __awaiter(void 0, void 0, void 0, function () {
     var url, response, result;
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          url = "http://localhost:3000/weather?city=" + cityName;
+          url = "http://localhost:8000/api/location/search/" + cityName;
+          return [4
+          /*yield*/
+          , fetch(url)];
+
+        case 1:
+          response = _a.sent();
+          return [4
+          /*yield*/
+          , response.json()];
+
+        case 2:
+          result = _a.sent();
+          return [2
+          /*return*/
+          , result];
+      }
+    });
+  });
+};
+
+var findWeatherInfoByWoeid = function findWeatherInfoByWoeid(woeid) {
+  return __awaiter(void 0, void 0, void 0, function () {
+    var url, response, result;
+    return __generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          url = "http://localhost:8000/api/location/" + woeid;
           return [4
           /*yield*/
           , fetch(url)];
@@ -83298,6 +83350,10 @@ var core_1 = require("@material-ui/core");
 var weather_searcher_1 = require("./weather-searcher");
 
 exports.Weather = function () {
+  return react_1.default.createElement(weather_context_1.WeatherProvider, null, react_1.default.createElement(WeatherMain, null));
+};
+
+var WeatherMain = function WeatherMain() {
   var weatherContext = weather_context_1.useWeatherContext();
 
   if (!weatherContext) {
@@ -83317,11 +83373,21 @@ exports.Weather = function () {
       setCountryName = _b[1];
 
   var onSearch = function onSearch() {
+    if (countryName === '') {
+      dispatch({
+        type: 'SEARCH_DONE',
+        payload: {
+          items: []
+        }
+      });
+      return;
+    }
+
     dispatch({
       type: 'SEARCHING'
     });
     weather_searcher_1.searchWeather(countryName).then(function (result) {
-      if (result.length === 0) {
+      if (!result) {
         dispatch({
           type: 'SEARCH_DONE',
           payload: {
@@ -83331,12 +83397,20 @@ exports.Weather = function () {
         return;
       }
 
-      var firstItem = result[0];
+      var weatherByDays = result.consolidated_weather,
+          title = result.title;
       dispatch({
         type: 'SEARCH_DONE',
         payload: {
-          cityName: firstItem.city,
-          items: firstItem.weather_by_day
+          cityName: title,
+          items: weatherByDays
+        }
+      });
+    }).catch(function (error) {
+      dispatch({
+        type: 'SEARCH_DONE',
+        payload: {
+          items: []
         }
       });
     });
@@ -83349,7 +83423,7 @@ exports.Weather = function () {
     item: true,
     xs: 12
   }, react_1.default.createElement(core_1.TextField, {
-    id: 'standard-basic',
+    id: 'seach-input',
     label: 'Search',
     value: countryName,
     onChange: function onChange(e) {
@@ -83419,18 +83493,16 @@ var react_1 = __importDefault(require("react"));
 
 var header_1 = require("./header");
 
-var weather_context_1 = require("./weather/weather-context");
-
 var react_router_dom_1 = require("react-router-dom");
 
 var main_page_1 = require("./pages/main-page");
 
 exports.Main = function () {
-  return react_1.default.createElement("div", null, react_1.default.createElement(header_1.Header, null), react_1.default.createElement(weather_context_1.WeatherProvider, null, react_1.default.createElement(react_router_dom_1.Switch, null, react_1.default.createElement(react_router_dom_1.Route, {
+  return react_1.default.createElement("div", null, react_1.default.createElement(header_1.Header, null), react_1.default.createElement(react_router_dom_1.Switch, null, react_1.default.createElement(react_router_dom_1.Route, {
     path: '/main'
-  }, react_1.default.createElement(main_page_1.MainPage, null)))));
+  }, react_1.default.createElement(main_page_1.MainPage, null))));
 };
-},{"react":"../node_modules/react/index.js","./header":"header.tsx","./weather/weather-context":"weather/weather-context.tsx","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./pages/main-page":"pages/main-page.tsx"}],"app.tsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./header":"header.tsx","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./pages/main-page":"pages/main-page.tsx"}],"app.tsx":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -83510,7 +83582,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59206" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62926" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
