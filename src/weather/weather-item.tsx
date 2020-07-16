@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { Grid, Paper, makeStyles } from '@material-ui/core';
 
 export const WeatherItem = (props: WeatherItem) => {
@@ -8,9 +9,15 @@ export const WeatherItem = (props: WeatherItem) => {
     return (
         <Grid item xs={3}>
             <Paper className={classes.paper}>
-                <div>Date: {date}</div>
-                <div>Max temparature: {maxTemp}</div>
-                <div>Min temparature: {minTemp}</div>
+                <div>Date: {moment(date).format('MMM Do YY')}</div>
+                <div>
+                    Max temp: {Math.round(maxTemp)}
+                    <span>&#8451;</span>
+                </div>
+                <div>
+                    Min temp: {Math.round(minTemp)}
+                    <span>&#8451;</span>
+                </div>
             </Paper>
         </Grid>
     );
