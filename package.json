@@ -7,7 +7,8 @@
         "start": "concurrently 'yarn parcel' 'yarn server'",
         "parcel": "parcel src/index.html",
         "server": "node proxy/server.js",
-        "test": "jest --config jest.config.js --watchAll"
+        "test": "jest --config jest.config.js --watchAll",
+        "test:w": "jest --config jest.config.js --watch"
     },
     "jest": {
         "preset": "ts-jest",

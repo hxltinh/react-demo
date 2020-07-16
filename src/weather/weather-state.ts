@@ -5,10 +5,11 @@ export type WeatherState = {
     loading?: boolean;
     cityName?: string;
     items: WeatherByDay[];
+    error?: boolean;
 };
 
 export type WeatherAction = {
-    type: 'SEARCHING' | 'SEARCH_DONE';
+    type: 'SEARCHING' | 'SEARCH_DONE' | 'SEARCH_FAILS';
     payload?: WeatherState;
 };
 
@@ -26,6 +27,7 @@ export const weatherReducer: Reducer<WeatherState, WeatherAction> = (
             return {
                 ...state,
                 loading: true,
+                error: false,
             };
         }
 
@@ -35,6 +37,15 @@ export const weatherReducer: Reducer<WeatherState, WeatherAction> = (
                 cityName: payload?.cityName,
                 items: payload ? payload.items : [],
                 loading: false,
+                error: false,
+            };
+        }
+
+        case 'SEARCH_FAILS': {
+            return {
+                ...state,
+                items: payload ? payload.items : [],
+                error: true,
             };
         }
 

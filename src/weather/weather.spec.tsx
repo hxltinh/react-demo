@@ -41,7 +41,7 @@ describe(Weather.name, () => {
             expect(wrapper.find(TextField).props().value).toEqual('some value');
         });
 
-        describe('when loading weather information base on location', () => {
+        describe('when searching weather information base on location', () => {
             test('it should show the list', async () => {
                 searchWeatherMock.mockImplementation(() =>
                     Promise.resolve({
@@ -49,9 +49,6 @@ describe(Weather.name, () => {
                         title: 'some location',
                     })
                 );
-                // searchWeatherMock.mockImplementation(() =>
-                //     Promise.reject('some error')
-                // );
 
                 act(() => {
                     const props = wrapper.find(TextField).at(0).props();
@@ -75,7 +72,7 @@ describe(Weather.name, () => {
                 ]);
             });
 
-            describe('when input is empty', () => {
+            describe('and when input is empty', () => {
                 test('it should finish loading with empty list', () => {
                     act(() => {
                         const props = wrapper.find(Button).at(0).props();
@@ -85,6 +82,33 @@ describe(Weather.name, () => {
                     wrapper.update();
 
                     expect(wrapper.find(WeatherList).props().items).toEqual([]);
+                });
+            });
+
+            describe('and when search fails', () => {
+                test('it should show the error', async () => {
+                    searchWeatherMock.mockImplementation(() =>
+                        Promise.reject('some error')
+                    );
+
+                    act(() => {
+                        const props = wrapper.find(TextField).at(0).props();
+                        props.onChange && props.onChange(textEvent);
+                    });
+
+                    wrapper.update();
+
+                    act(() => {
+                        const props = wrapper.find(Button).at(0).props();
+                        props.onClick && props.onClick(buttonEvent);
+                    });
+                    wrapper.update();
+
+                    await act(() => Promise.resolve());
+
+                    wrapper.update();
+
+                    expect(wrapper.find('.error').length).toBe(1);
                 });
             });
         });

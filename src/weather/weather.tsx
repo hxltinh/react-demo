@@ -20,7 +20,7 @@ const WeatherMain = () => {
     }
 
     const [state, dispatch] = weatherContext;
-    const { cityName, items, loading } = state;
+    const { cityName, items, loading, error } = state;
 
     const [countryName, setCountryName] = useState('');
 
@@ -61,13 +61,17 @@ const WeatherMain = () => {
             })
             .catch(error => {
                 dispatch({
-                    type: 'SEARCH_DONE',
+                    type: 'SEARCH_FAILS',
                     payload: {
                         items: [],
                     },
                 });
             });
     };
+
+    if (error) {
+        return <div className='error'>Error occurred</div>;
+    }
 
     return (
         <>
