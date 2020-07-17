@@ -20,3 +20,4 @@ Using Jest and Enzyme for testing
 ## Note
 
 Because of CORS, a proxy server must be built, therefore I'm using ExpressJs to build one for Application development.
+Using yarn `test:w [relative path]` for single file test, for example: `yarn test:w src/weather/weather.spec.tsx`
